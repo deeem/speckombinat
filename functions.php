@@ -120,7 +120,8 @@ function speckombinat_scripts() {
 	wp_script_add_data( 'respond', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
-	wp_enqueue_style( 'speckombinat-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'speckombinat-fonts', '//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Open+Sans:400,300,700&subset=latin,cyrillic,cyrillic-ext', array('bootstrap'));
+	wp_enqueue_style( 'speckombinat-style', get_stylesheet_uri(), array('bootstrap', 'speckombinat-fonts') );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'), false, true );
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/main.js', array('jquery'), false, true );

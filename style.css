@@ -353,8 +353,6 @@ object {
 ## General
 --------------------------------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab:400,100,300,700|Open+Sans:400,300,700,800&subset=latin,cyrillic);
-
 body {
 	font-family: "Roboto Slab", sans-serif;
 	font-weight: 300;
