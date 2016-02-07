@@ -77,6 +77,13 @@ function speckombinat_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Enable to upload svg files
+	add_filter('upload_mimes', 'pixert_upload_types');
+	function pixert_upload_types($existing_mimes=array()){
+		$existing_mimes['svg'] = 'image/svg+xml';
+		return $existing_mimes;
+	}
 }
 endif;
 add_action( 'after_setup_theme', 'speckombinat_setup' );

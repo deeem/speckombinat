@@ -2,28 +2,19 @@
 	<div class="container">
 		<h2>Послуги</h2>
 		<div class="row">
-			<div class="col-sm-4">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/icon_delivery.svg" alt="icon delivery">
-				<ul>
-					<li>перевезення радіоактивних відходів</li>
-					<li>надання транспортних послуг</li>
-					<li>забезпечення паливно-мастильними матеріалами</li>
-				</ul>
-			</div><!-- col -->
-			<div class="col-sm-4">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/icon_hotel.svg" alt="icon hotel">
-				<ul>
-					<li>надання житлово-комунальних послуг</li>
-					<li>забезпечення тепло-, водо-, електропостачанням</li>
-				</ul>
-			</div><!-- col -->
-			<div class="col-sm-4">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/icon_cutlery.svg" alt="icon cutlery">
-				<ul>
-					<li>надання трьохразового лікувально-профілактичного харчування</li>
-					<li>забеспечення в послугах зв’язку та інтернету</li>
-				</ul>
-			</div><!-- col -->
+			<?php $loop = new WP_Query( array(
+				'post_type' => 'service',
+				'orderby'   => 'post_id',
+				'order'     => 'ASC'
+			) );
+			?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<div class="col-sm-4">
+					<?php if ( has_post_thumbnail() ) : the_post_thumbnail(); endif; ?>
+					<?php the_content(); ?>
+				</div><!-- col -->
+			<?php endwhile; ?>
+			<?php wp_reset_query(); ?>
 		</div><!-- row -->
 	</div><!-- container -->
 </section><!-- services -->

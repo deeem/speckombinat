@@ -3,7 +3,7 @@
 
     function init(){
         myMap = new ymaps.Map("map", {
-            center: [51.27138754, 30.22168257], // Чернобыль
+            center: [51.27138754, 30.22168257],
             zoom: 17,
         });
 
