@@ -1,26 +1,31 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package speckombinat
- */
-
-?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'speckombinat' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'speckombinat' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'speckombinat' ), 'speckombinat', '<a href="http://github.com/deeem" rel="designer">deeem</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="row">
+					<div class="col-sm-6 my-nav">
+						<ul>
+							<li><a href="#">оголошення</a></li>
+							<li><a href="#">вакансії</a></li>
+							<li><a href="#">план закупівель</a></li>
+						</ul>
+					</div><!-- col -->
+					<div class="col-sm-6 my-nav">
+						<ul>
+							<li><a href="#">телефони</a></li>
+							<li><a href="#">перепустка</a></li>
+							<li><a href="#">архіви</a></li>
+						</ul>
+					</div><!-- col -->
+				</div><!-- row -->
+			</div><!-- col -->
+			<div class="col-xsq-6 my-logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/logo_small.svg" width="80px">
+				<p>2016 &copy; Спецкомбинат</p>
+			</div><!-- col -->
+		</div><!-- row -->
+	</div><!-- container -->
+</footer>
 
 <?php wp_footer(); ?>
 
