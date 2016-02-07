@@ -44,7 +44,8 @@ function speckombinat_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'speckombinat' ),
+		'footer1' => esc_html__( 'Footer Column 1', 'speckombinat' ),
+		'footer2' => esc_html__( 'Footer Column 2', 'speckombinat' )
 	) );
 
 	/*

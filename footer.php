@@ -1,21 +1,29 @@
+
+
 <footer>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6">
 				<div class="row">
 					<div class="col-sm-6 my-nav">
-						<ul>
-							<li><a href="#">оголошення</a></li>
-							<li><a href="#">вакансії</a></li>
-							<li><a href="#">план закупівель</a></li>
-						</ul>
+						<?php
+						if (has_nav_menu( 'footer1' )){
+							wp_nav_menu( array(
+								'theme_location' => 'footer1',
+								'container' => '',
+							) );
+						}
+						?>
 					</div><!-- col -->
 					<div class="col-sm-6 my-nav">
-						<ul>
-							<li><a href="#">телефони</a></li>
-							<li><a href="#">перепустка</a></li>
-							<li><a href="#">архіви</a></li>
-						</ul>
+						<?php
+						if (has_nav_menu( 'footer2' )){
+							wp_nav_menu( array(
+								'theme_location' => 'footer2',
+								'container' => '',
+							) );
+						}
+						?>
 					</div><!-- col -->
 				</div><!-- row -->
 			</div><!-- col -->
