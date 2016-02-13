@@ -8,4 +8,4 @@
 	<link href="<?php echo get_template_directory_uri() ?>/img/favicon.ico" rel="icon">
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>

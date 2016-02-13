@@ -140,6 +140,11 @@ function speckombinat_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'speckombinat_scripts' );
 
+/*
+ * Hide admin bar for registered user
+ */
+add_filter( 'show_admin_bar', '__return_false' );
+
 /**
  * Implement the Custom Header feature.
  */
