@@ -380,6 +380,9 @@ header {
 	text-rendering: optimizeLegibility;
 }
 
+section {
+    padding: 80px 0;
+}
 /*--------------------------------------------------------------
 ## Home Page Sections
 --------------------------------------------------------------*/
@@ -483,25 +486,40 @@ footer a, footer a:visited, footer a:hover {
 /*--------------------------------------------------------------
 ## Page Template
 --------------------------------------------------------------*/
-.page-template-page-phones{
-	background: url('img/textured_paper.jpg') repeat;
+
+.feature-image {
+    display: table;
+    width: 100%;
 }
 
-.page-template-page-phones header {
-	color: #ede8e4;
-	background-color: #08091b;
+.feature-image-default {
+    background: url('img/feature-image.jpg') no-repeat;
+    background-size: cover;
 }
 
-.page-template-page-phones header img {
-	width: 80px;
+.feature-image h1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
-.page-template-page-phones header h1 {
-	margin-bottom: 0;
-	padding: 1em;
+/*=== Phones Page ===*/
+
+.page-template-page-phones td:nth-child(1) {
+    padding: 1em 1em 1em 1em;
 }
 
-.page-template-page-phones article {
-	background: #fff;
-	padding: 2em 1em 1em 2em;
+.page-template-page-phones td:nth-child(1):hover {
+    background-color: #6486ac;
+    color: white;
+}
+
+.page-template-page-phones td:nth-child(2) {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #6486ac;
+    width: 5em;
+    color: white;
 }

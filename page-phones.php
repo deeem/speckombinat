@@ -5,32 +5,25 @@
 ?>
 
 <?php get_header(); ?>
+
+<section class="feature-image feature-image-default" data-type="background" data-speed="2">
+	<h1 class="page-title"><?php the_title(); ?></h1>
+</section>
+
 <?php if ( have_posts() ): the_post(); ?>
-
 <div class="container">
 	<div class="row">
-		<div class="col-sm-9 col-sm-offset-1">
-			<header>
-				<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/logo_small.svg" alt="logo small"> -->
-				<h1><?php the_title(); ?></h1>
-			</header>
-		</div><!-- col -->
-	</div><!-- row -->
-</div><!-- container -->
-
-<div class="container">
-	<div class="row">
-		<div class="col-sm-9 col-sm-offset-1">
-			<article>
+		<div class="col-sm-12">
+			<section class="main-content">
 				<?php echo the_content(); ?>
-			</article>
-		</div><!-- col -->
+			</section>
+		</div><!-- .col -->
 	</div><!-- row -->
-</div><!-- container -->
+</div><!-- .container -->
 
 <?php endif; ?>
 
-<?php wp_footer(); ?>
+<?php get_footer(); ?>
 
 </body>
 </html>
