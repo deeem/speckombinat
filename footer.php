@@ -27,7 +27,7 @@
 			</div><!-- col -->
 			<div class="col-xsq-6 my-logo">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/logo_small.svg" width="80px">
-				<p>2016 &copy; Спецкомбинат</p>
+				<p><?php echo date('Y'); ?> &copy; Спецкомбинат</p>
 			</div><!-- col -->
 		</div><!-- row -->
 	</div><!-- container -->
