@@ -20,6 +20,8 @@
 </div><!-- .container -->
 <?php endif; ?>
 
+<?php get_template_part( 'template-parts/page', 'footer' ); ?>
+
 <?php get_footer(); ?>
 
 </body>
