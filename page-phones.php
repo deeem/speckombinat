@@ -6,9 +6,7 @@
 
 <?php get_header(); ?>
 
-<section class="feature-image feature-image-default" data-type="background" data-speed="2">
-	<h1 class="page-title"><?php the_title(); ?></h1>
-</section>
+<?php get_template_part( 'template-parts/page', 'header' ); ?>
 
 <?php if ( have_posts() ): the_post(); ?>
 <div class="container">
@@ -20,7 +18,6 @@
 		</div><!-- .col -->
 	</div><!-- row -->
 </div><!-- .container -->
-
 <?php endif; ?>
 
 <?php get_footer(); ?>
