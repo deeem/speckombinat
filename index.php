@@ -14,43 +14,49 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<section id="page-header" class="feature-image-default" data-type="background" data-speed="2">
+	<div class="container">
+		<h1><?php single_post_title(); ?></h1>
+		<img src="<?php echo get_template_directory_uri();?>/img/logo_small.svg" alt="Logo Small">
+	</div>
+</section>
 
-		<?php
-		if ( have_posts() ) :
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<main class="site-main" role="main">
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+				<?php
 
-			<?php
-			endif;
+				$loop = new WP_Query( array(
+					'meta_key'     => 'announce_until',
+					'meta_value'   => time(),
+					'meta_compare' => '>'
+				) );
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+				if ( $loop->have_posts() ) :
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+					while ( $loop->have_posts() ) : $loop->the_post();
+						get_template_part( 'template-parts/content' );
 
-			endwhile;
+					endwhile;
 
-			the_posts_navigation();
+				else :
 
-		else :
+					get_template_part( 'template-parts/content', 'none' );
 
-			get_template_part( 'template-parts/content', 'none' );
+				endif; ?>
 
-		endif; ?>
+			</main>
+		</div><!-- .col -->
+	</div><!-- .row -->
+</div><!-- .container -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+<section id="page-footer" class="feature-image-default" data-type="background" data-speed="2">
+	<div class="container">
+		<h1>&nbsp;</h1>
+	</div>
+</section>
 
 <?php
-get_sidebar();
 get_footer();
