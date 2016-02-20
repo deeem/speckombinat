@@ -383,6 +383,44 @@ section {
     padding: 80px 0;
 }
 
+
+/*=== Footer ====*/
+
+footer {
+	background: #08091b;
+	padding: 20px 0;
+	font-size: .9em;
+	color: #ede8e4;
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer li.current_page_item a {
+	color: #ff7800;
+}
+
+footer a, footer a:visited, footer a:hover {
+	text-decoration: none;
+	color: #ede8e4;
+	font-size: .9em;
+}
+
+footer div.my-logo {
+	text-align: center;
+}
+
+/*=== Feature Image ===*/
+
+.feature-image-default {
+	background: url('img/page-feature.jpg') 50% 0 repeat fixed;
+}
+
+.feature-image-default-alt {
+	background: url( 'img/page-feature-alt.jpg' ) 50% 0 repeat fixed;
+}
+
 /*--------------------------------------------------------------
 ## Home Page Sections
 --------------------------------------------------------------*/
@@ -397,7 +435,7 @@ section {
 }
 
 #hero {
-	background: url('img/header.jpg') 50% 0 repeat fixed;
+	background: url('img/home-hero-alt.jpg') 50% 0 repeat fixed;
 	padding: 3em 0;
 }
 
@@ -461,41 +499,12 @@ section {
 }
 
 /*--------------------------------------------------------------
-## Footer
---------------------------------------------------------------*/
-
-footer {
-	background: #08091b;
-	padding: 20px 0;
-	font-size: .9em;
-	color: #ede8e4;
-}
-
-footer ul {
-	list-style-type: none;
-}
-
-footer li.current_page_item a {
-	color: #ff7800;
-}
-
-footer a, footer a:visited, footer a:hover {
-	text-decoration: none;
-	color: #ede8e4;
-	font-size: .9em;
-}
-
-footer div.my-logo {
-	text-align: center;
-}
-
-/*--------------------------------------------------------------
 ## Page Template
 --------------------------------------------------------------*/
 
 /*=== Page Header Template ===*/
 
-section#page-header {
+#page-header {
     padding: 0;
 }
 
@@ -523,14 +532,9 @@ section#page-header {
     top: 70px;
 }
 
-.feature-image-default {
-	background: url('img/header.jpg') no-repeat;
-	background-size: cover;
-}
-
 /*=== Page Footer Template ===*/
 
-section#page-footer {
+#page-footer {
 	padding: 0;
 }
 
@@ -551,29 +555,23 @@ section#page-footer {
     color: white;
 }
 
-#page-footer.feature-image-default {
-	background: url('img/footer.jpg');
-	background-size: cover;
-}
-
 /*=== Default Template ===*/
 
-.page-template-default .site-main,
-.blog .site-main {
+.site-main {
 	font-size: 14px;
 	font-weight: normal;
 	padding: 5em 0 5em 0;
 }
 
-.page-template-default .site-main h3,
-.page-template-default .site-main h4,
-.page-template-default .site-main h5 {
+.site-main h3,
+.site-main h4,
+.site-main h5 {
 	font-weight: bold;
 }
 
-.page-template-default .site-main h3:first-child,
-.page-template-default .site-main h4:first-child,
-.page-template-default .site-main h5:first-child {
+.site-main h3:first-child,
+.site-main h4:first-child,
+.site-main h5:first-child {
 	margin-top: 0;
 }
 

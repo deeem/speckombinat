@@ -14,12 +14,7 @@
 
 get_header(); ?>
 
-<section id="page-header" class="feature-image-default" data-type="background" data-speed="2">
-	<div class="container">
-		<h1><?php single_post_title(); ?></h1>
-		<img src="<?php echo get_template_directory_uri();?>/img/logo_small.svg" alt="Logo Small">
-	</div>
-</section>
+<?php get_template_part( 'template-parts/index', 'header' ); ?>
 
 <div class="container">
 	<div class="row">
@@ -52,11 +47,7 @@ get_header(); ?>
 	</div><!-- .row -->
 </div><!-- .container -->
 
-<section id="page-footer" class="feature-image-default" data-type="background" data-speed="2">
-	<div class="container">
-		<h1>&nbsp;</h1>
-	</div>
-</section>
+<?php get_template_part( 'template-parts/index', 'footer' ); ?>
 
 <?php
 get_footer();
