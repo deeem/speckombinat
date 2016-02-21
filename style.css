@@ -584,3 +584,13 @@ footer div.my-logo {
 	padding: 2em;
 	margin: 15px 0;
 }
+
+/*--------------------------------------------------------------
+## Media Queries
+--------------------------------------------------------------*/
+
+@media screen and ( max-width: 991px ) {
+	#page-header img {
+		display: none;
+	}
+}
