@@ -536,8 +536,9 @@ footer div.my-logo {
 /*=== Default Template ===*/
 
 .site-main {
-	font-size: 14px;
 	font-weight: normal;
+	font-size: 18px;
+	line-height: 26px;
 	padding: 5em 0 5em 0;
 }
 
