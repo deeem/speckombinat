@@ -411,16 +411,6 @@ footer div.my-logo {
 	text-align: center;
 }
 
-/*=== Feature Image ===*/
-
-.feature-image-default {
-	background: url('img/page-feature.jpg') 50% 0 repeat fixed;
-}
-
-.feature-image-default-alt {
-	background: url( 'img/page-feature-alt.jpg' ) 50% 0 repeat fixed;
-}
-
 /*--------------------------------------------------------------
 ## Home Page Sections
 --------------------------------------------------------------*/
@@ -435,7 +425,7 @@ footer div.my-logo {
 }
 
 #hero {
-	background: url('img/home-hero-alt.jpg') 50% 0 repeat fixed;
+	background: url('img/home-feature.jpg') 50% 0 repeat fixed;
 	padding: 3em 0;
 }
 
@@ -502,13 +492,15 @@ footer div.my-logo {
 ## Page Template
 --------------------------------------------------------------*/
 
-/*=== Page Header Template ===*/
+/*=== Page Header/Footer ===*/
 
-#page-header {
-    padding: 0;
+#page-header,
+#page-footer {
+	padding: 0;
 }
 
-#page-header .container {
+#page-header .container,
+#page-footer .container {
     padding: 80px 0;
     background-color: rgba(0,0,0,.4);
     width: 100%;
@@ -516,7 +508,8 @@ footer div.my-logo {
     position: relative;
 }
 
-#page-header h1 {
+#page-header h1,
+#page-footer h1 {
     display: table-cell;
     vertical-align: middle;
     font-weight: bold;
@@ -532,27 +525,12 @@ footer div.my-logo {
     top: 70px;
 }
 
-/*=== Page Footer Template ===*/
-
-#page-footer {
-	padding: 0;
+.feature-image-default {
+	background: url('img/page-feature.jpg') 50% 0 repeat fixed;
 }
 
-#page-footer .container {
-    padding: 80px 0;
-    background-color: rgba(0,0,0,.4);
-    width: 100%;
-    display: table;
-    position: relative;
-}
-
-#page-footer h1 {
-    display: table-cell;
-    vertical-align: middle;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
+.feature-image-default-alt {
+	background: url('img/page-feature-alt.jpg') 50% 0 repeat fixed;
 }
 
 /*=== Default Template ===*/
